@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Schrödinger Hunters</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        margin: 0;
+        background-color: #0f172a; /* Slate 900 */
+        color: white;
+        overflow: hidden;
+        font-family: 'Roboto', sans-serif;
+        perspective: 1000px; /* Enable 3D space */
+      }
+      h1, h2, .title-font {
+        font-family: 'Orbitron', sans-serif;
+      }
+      /* Custom scrollbar for panels */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #1e293b;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #475569;
+        border-radius: 3px;
+      }
+      .animate-float {
+        animation: float 6s ease-in-out infinite;
+      }
+      @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
+        100% { transform: translateY(0px); }
+      }
+      
+      .blur-bg {
+        backdrop-filter: blur(8px) brightness(0.6);
+      }
+
+      /* Luminous Burst Animation for Victory */
+      @keyframes luminous-burst {
+        0% { filter: brightness(1) drop-shadow(0 0 0px transparent); }
+        50% { filter: brightness(1.5) drop-shadow(0 0 30px rgba(255,255,255,0.6)); }
+        100% { filter: brightness(1.1) drop-shadow(0 0 10px rgba(255,255,255,0.2)); }
+      }
+      
+      .victory-glow {
+        animation: luminous-burst 1s ease-in-out forwards;
+      }
+      
+      .victory-container {
+        transition: transform 0.9s cubic-bezier(0.33, 1, 0.68, 1);
+      }
+
+      @keyframes pulse {
+        0% { opacity: 0.8; }
+        50% { opacity: 1; }
+        100% { opacity: 0.8; }
+      }
+
+      @keyframes flash {
+        0% { opacity: 1; background-color: white; }
+        100% { opacity: 0; background-color: transparent; }
+      }
+      
+      .animate-flash {
+        animation: flash 1.5s ease-out forwards;
+      }
+      
+      .atom-container {
+        /* Internal transitions for atom parts */
+        transition: transform 0.5s ease-out;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

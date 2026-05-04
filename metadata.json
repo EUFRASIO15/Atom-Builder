@@ -1,0 +1,6 @@
+{
+  "name": "Atom Builder: Orbital Hunt",
+  "description": "A 2D/Pseudo-3D interactive educational game where players hunt electrons to build atoms, visualizing orbitals, electronic configurations, and CPK coloring.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
